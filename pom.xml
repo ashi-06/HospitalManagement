@@ -1,21 +1,46 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>SE</groupId>
   <artifactId>HospitalMgmtSystem</artifactId>
-  <pakaging>jar</pakaging>
-  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <version>0.0.1</version>
   <name>HospitalMgmtSystem Maven Webapp</name>
-  <url>http://maven.java.org12</url>
+  <url>https://github.com/yourusername/HospitalMgmtSystem</url>
+
+  <properties>
+    <maven.compiler.release>21</maven.compiler.release>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
   <dependencies>
     <dependency>
-      <groupId>SE</groupId>
+      <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.6.0</version>
-      <scope>TEDT</scope>
+      <version>4.13.2</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
+      <version>4.0.4</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
+
   <build>
-    <finalName>localhost:8080/FoodSystem</finalName>
+    <finalName>HospitalMgmtSystem</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.11.0</version>
+        <configuration>
+          <release>${maven.compiler.release}</release>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>
